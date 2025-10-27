@@ -512,4 +512,9 @@
          height: auto;
          min-height: 100vh
      }
+
+     .markets a {
+      width: 250px;
+      height: 100px;
+      }
  }
