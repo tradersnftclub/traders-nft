@@ -170,57 +170,65 @@
  }
 
  .mint-btn-container {
-     margin-top: 30px;
-     display: flex;
-     justify-content: center;
-     animation: fadeIn 1.2s ease;
+  width:250px;
+  height:50px;
+  display:flex;
+  gap:3px;
+  margin-top: 10px;
+  border-radius:12px;
+  overflow:hidden;
+  background:#010902;
+  border:2px solid #0f172a;
  }
 
- .mint-btn {
-     display: inline-flex;
-     align-items: center;
-     gap: 10px;
-     font-size: 18px;
-     font-weight: bold;
-     color: #fff;
-     text-decoration: none;
-     background: linear-gradient(90deg, #ff003c, #ff6f00);
-     border: 2px solid #ff002b;
-     padding: 14px 28px;
-     border-radius: 12px;
-     box-shadow: 0 0 20px rgba(255, 0, 0, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.2);
-     transition: all 0.2s ease;
-     position: relative;
- }
+ .mint-btn-container a{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  text-decoration:none;
+  cursor:pointer;
+  transition:flex .6s ease, background .5s ease;
+}
+ 
+.mint-btn-container a:hover{
+  flex:4;
+}
 
- .mint-btn:hover {
-     transform: scale(1.08);
-     background: linear-gradient(90deg, #ff6f00, #ff003c);
-     box-shadow: 0 0 25px rgba(255, 0, 0, 0.8), inset 0 0 10px rgba(255, 255, 255, 0.3);
- }
+.mint-btn-container img{
+  width:22px;
+  filter:drop-shadow(0 0 1px rgba(255,255,255,.5));
+}
 
- .mint-btn:active {
-     transform: scale(0.98);
- }
+.label{
+  opacity:0;
+  max-width:0;
+  overflow:hidden;
+  white-space:nowrap;
+  color:#fff;
+  font-size:14px;
+  transition:opacity .3s ease, max-width .4s ease;
+}
 
- .mint-arrow {
-     animation: blinkArrow 1.2s infinite;
- }
+.mint-btn-container a:hover .label{
+  opacity:1;
+  max-width:150px;
+}
 
- @keyframes blinkArrow {
+.eth{
+  background:linear-gradient(135deg,#ff0000b1,#af0606c6);
+}
+.eth:hover{
+  background:#3b83f6ba;
+}
 
-     0%,
-     100% {
-         opacity: 1;
-         transform: translateX(0)
-     }
-
-     50% {
-         opacity: .5;
-         transform: translateX(4px)
-     }
- }
-
+.ronin{
+  background:linear-gradient(135deg,#1aff00b9,#03a803b9);
+}
+.ronin:hover{
+  background:linear-gradient(135deg,#010101,#020517);
+}
 
  #about {
      position: relative
